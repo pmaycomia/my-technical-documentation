@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <aside>
+        <nav id="navbar">
+            <header align="center"> Git and GitHub</header>
+            <ul>
+                <li><a href="#Introduction" class="nav-link"> Introduction</a></li>
+                <li><a href="#Distributed_Version_Control_System" class="nav-link"> Distributed Version Control System</a></li>
+                <li><a href="#Repository" class="nav-link"> Repository</a></li>
+                <li><a href="#Adding_a_New_Repository" class="nav-link"> Adding a New Repository</a></li>
+                <li><a href="#Obtaining_a_Repository" class="nav-link"> Obtaining a Repository</a></li>
+                <li><a href="#Adding_Files" class="nav-link"> Adding Files</a></li>
+                <li><a href="#Recording_Files" class="nav-link"> Recording Files</a></li>
+                <li><a href="#Merging" class="nav-link"> Merging</a></li>
+                <li><a href="#Getting_Updates" class="nav-link"> Getting Updates</a></li>
+                <li><a href="#Updating_or_Changing" class="nav-link"> Updating or Changing</a></li>
+                <li><a href="#GitHub" class="nav-link"> GitHub</a></li>
+                <li><a href="#The_GitHub_Flow" class="nav-link"> The GitHub Flow</a></li>
+                <li><a href="#GitHub_and_the_Command_Line" class="nav-link"> GitHub and the Command Line</a></li>
+                <li><a href="#References" class="nav-link"> References</a></li>
+            </ul </nav>
+    </aside>
+
+
+
+    <main id="main-doc">
+
+        <section class="main-section" id="Introduction">
+            <header id="Introduction"> Introduction </header>
+
+            <p> A version control system, or VCS, tracks the history of changes as people and teams collaborate on projects together. As the project evolves, teams can run tests, fix bugs, and contribute new code with the confidence that any version can be
+                recovered at any time. Developers can review project history to find out: </p>
+
+            <li> Which changes were made?</li>
+            <li> Who made the changes?</li>
+            <li> When were the changes made?</li>
+            <li> Why were changes needed?</li>
+            <br>
+            <br>
+        </section>
+
+        <section class="main-section" id="Distributed_Version_Control_System">
+            <header id="Distributed_Version_Control_System"> Distributed Version Control System </header>
+
+            <p> Git is an example of a distributed version control system (DVCS) commonly used for open source and commercial software development. DVCSs allow full access to every file, branch, and iteration of a project, and allows every user access to
+                a full and self-contained history of all changes. Unlike once popular centralized version control systems, DVCSs like Git don’t need a constant connection to a central repository. Developers can work anywhere and collaborate asynchronously
+                from any time zone.</p>
+            <p> Without version control, team members are subject to redundant tasks, slower timelines, and multiple copies of a single project. To eliminate unnecessary work, Git and other VCSs give each contributor a unified and consistent view of a project,
+                surfacing work that’s already in progress. Seeing a transparent history of changes, who made them, and how they contribute to the development of a project helps team members stay aligned while working independently.</p>
+            <br>
+            <br>
+        </section>
+
+        <section class="main-section" id="Repository">
+            <header id="Repository"> Repository </header>
+            <a href="Repository"></a>
+            <p> A repository, or Git project, encompasses the entire collection of files and folders associated with a project, along with each file’s revision history. The file history appears as snapshots in time called commits, and the commits exist as
+                a linked-list relationship, and can be organized into multiple lines of development called branches. Because Git is a DVCS, repositories are self-contained units and anyone who owns a copy of the repository can access the entire codebase
+                and its history. Using the command line or other ease-of-use interfaces, a git repository also allows for: interaction with the history, cloning, creating branches, committing, merging, comparing changes across versions of code, and more.</p>
+            <p> Working in repositories keeps development projects organized and protected. Developers are encouraged to fix bugs, or create fresh features, without fear of derailing mainline development efforts. Git facilitates this through the use of topic
+                branches: lightweight pointers to commits in history that can be easily created and deprecated when no longer needed.</p>
+            <p> Through platforms like GitHub, Git also provides more opportunities for project transparency and collaboration. Public repositories help teams work together to build the best possible final product.</p>
+
+            <br>
+            <br>
+        </section>
+
+
+
+        <section class="main-section" id="Adding_a_New_Repository">
+            <header id="Adding_a_New_Repository"> Adding a New Repository </header>
+            <a href="Adding_a_New_Repository"></a>
+            <div class="code"><code> git init [repository name]</code></div>
+            <p> initializes a brand new Git repository and begins tracking an existing directory. It adds a hidden subfolder within the existing directory that houses the internal data structure required for version control.</p>
+            <br>
+            <br>
+        </section>
+
+        <section class="main-section" id="Obtaining_a_Repository">
+            <header id="Obtaining_a_Repository"> Obtaining a Repository</header>
+            <a href="Obtaining_a_Repository"></a>
+            <div class="code"><code>git clone [url] </code></div>
+            <p> creates a local copy of a project that already exists remotely. The clone includes all the project’s files, history, and branches. </p>
+            <br>
+            <br>
+        </section>
+
+        <section class="main-section" id="Adding_Files">
+            <header id="Adding_Files"> Adding Files</header>
+            <a href="Adding_Files"></a>
+            <p>Git tracks changes to a developer’s codebase, but it’s necessary to stage and take a snapshot of the changes to include them in the project’s history. This command performs staging, the first part of that two-step process. Any changes that
+                are staged will become a part of the next snapshot and a part of the project’s history. Staging and committing separately gives developers complete control over the history of their project without changing how they code and work.</p><br>
+            <article class="code">
+                <code># adds a file to the staging area<br>
+          git add [file]<br>
+          <br>
+          # adds one or more to the staging area<br>
+          git add * </code></article>
+            <br>
+            <br>
+        </section>
+
+        <section class="main-section" id="Recording_Files">
+            <header id="Recording_Files">Recording Files</header>
+            <a href="Recording_Files"></a>
+            <p> A commit functions like taking a photo. Anything that’s been staged with <code class="code">git add</code> will become a part of the snapshot with <code class="code">git commit.</code></p>
+            <div class="code">
+                <code> 
+          # records or snapshots the file permanently in the version history.<br>
+          git commit -m “[ Type in the commit message]”<br>
+          <br>
+          # commits any files you’ve added with the git add command and also commits any files you’ve changed since then<br>
+         git commit -a 
+          </code> </div>
+            <br>
+            <br>
+        </section>
+
+        <section class="main-section" id="Merging">
+            <header id="Merging"> Merging</header>
+            <a href="Merging"></a>
+            <div class="code"><code> git merge [branch name]  </code></div>
+            <p> merges lines of development together. This command is typically used to combine changes made on two distinct branches. For example, a developer would merge when they want to combine changes from a feature branch into the main branch for deployment.
+            </p>
+            <br>
+            <br>
+        </section>
+
+        <section class="main-section" id="Getting_Updates">
+            <header id="Getting_Updates"> Getting Updates </header>
+            <a href="Getting_Updates"></a>
+
+            <div class="code"><code> git pull [Repository Link]</code></div>
+            <p>updates the local line of development with updates from its remote counterpart. Developers use this command if a teammate has made commits to a branch on a remote, and they would like to reflect those changes in their local environment. </p>
+
+            <br>
+            <br>
+        </section>
+
+        <section class="main-section" id="Updating_or_Changing">
+            <header id="Updating_or_Changing"> Updating or Changing</header>
+            <a href="Updating_or_Changing"></a>
+            <div class="code">
+                <code> 
+          # this command sends the committed changes of master branch to your remote repository <br>
+          git push [variable name] master <br>
+          <br>
+          # this command sends the branch commits to your remote repository <br>
+         git push [variable name] [branch] <br>
+          <br>
+          # this command pushes all branches to your remote repository<br>
+          git push –all [variable name] <br>
+          <br>
+          # this command deletes a branch on your remote repository. <br>
+          git push [variable name] :[branch name]<br>
+          </code></div>
+            <br>
+            <br>
+        </section>
+
+        <section class="main-section" id="GitHub">
+            <header id="GitHub"> GitHub</header>
+            <a href="GitHub"></a>
+            <p> GitHub is a Git hosting repository that provides developers with tools to ship better code through command line features, issues (threaded discussions), pull requests, code review, or the use of a collection of free and for-purchase apps in
+                the GitHub Marketplace. With collaboration layers like the GitHub flow, a community of 15 million developers, and an ecosystem with hundreds of integrations, GitHub changes the way software is built.</p>
+
+            <p> It builds collaboration directly into the development process. Work is organized into repositories, where developers can outline requirements or direction and set expectations for team members. Then, using the GitHub flow, developers simply
+                create a branch to work on updates, commit changes to save them, open a pull request to propose and discuss changes, and merge pull requests once everyone is on the same page.</p>
+            <br>
+            <br>
+        </section>
+
+        <section class="main-section" id="The_GitHub_Flow">
+            <header id="The_GitHub_Flow"> The GitHub Flow</header>
+            <a href="The_GitHub_Flow"></a>
+            <p> The GitHub flow has six steps, each with distinct benefits when implemented:</p>
+
+            <ol>
+                <li> <strong>Create a branch: </strong>Topic branches created from the canonical deployment branch (usually <code class="code">main</code>) allow teams to contribute to many parallel efforts. Short-lived topic branches, in particular, keep
+                    teams focused and results in quick ships.</li>
+                <li> <strong>Add commits: </strong>Snapshots of development efforts within a branch create safe, revertible points in the project’s history.</li>
+                <li> <strong>Open a pull request:</strong> Pull requests publicize a project’s ongoing efforts and set the tone for a transparent development process.</li>
+                <li> <strong>Discuss and review code: </strong>Teams participate in code reviews by commenting, testing, and reviewing open pull requests. Code review is at the core of an open and participatory culture.</li>
+                <li> <strong>Merge: </strong>Upon clicking merge, GitHub automatically performs the equivalent of a local ‘git merge’ operation. GitHub also keeps the entire branch development history on the merged pull request.</li>
+                <li> <strong>Deploy: </strong>Teams can choose the best release cycles or incorporate continuous integration tools and operate with the assurance that code on the deployment branch has gone through a robust workflow.</li>
+            </ol>
+            <br>
+            <br>
+        </section>
+
+        <section class="main-section" id="GitHub_and_the_Command_Line">
+            <header id="GitHub_and_the_Command_Line"> GitHub and the Command Line</header>
+            <a href="GitHub_and_the_Command_Line"></a>
+            <p> Sometimes, a series of commands can paint a picture of how to use Git:</p>
+            <h5> Example: Contribute to an existing repository</h5>
+            <div class="code"><code># download a repository on GitHub.com to our machine<br>
+    git clone https://github.com/me/repo.git<br>
+    <br>
+    # change into the `repo` directory<br>
+    cd repo<br>
+    <br>
+    # create a new branch to store any new changes<br>
+    git branch my-branch<br>
+    <br>
+    # switch to that branch (line of development)<br>
+    git checkout my-branch<br>
+    <br>
+    # make changes, for example, edit `file1.md` and `file2.md` using the text editor<br>
+    <br>
+    # stage the changed files<br>
+    git add file1.md file2.md<br>
+    <br>
+    # take a snapshot of the staging area (anything that's been added)<br>
+    git commit -m "my snapshot"<br>
+    <br>
+    # push changes to github<br>
+          git push --set-upstream origin my-branch </code></div>
+
+            <h5> Example: Start a new repository and publish it to GitHub</h5>
+            <p> First, you will need to create a new repository on GitHub. You can learn how to create a new repository in our Hello World guide. Do not initialize the repository with a README, .gitignore or License. This empty repository will await your
+                code.
+            </p>
+            <div class="code"><code>
+           # create a new directory, and initialize it with git-specific functions<br>
+    git init my-repo<br>
+    <br>
+    # change into the `my-repo` directory<br>
+    cd my-repo<br>
+    <br>
+    # create the first file in the project<br>
+    touch README.md<br>
+    <br>
+    # git isn't aware of the file, stage it<br>
+    git add README.md<br>
+    <br>
+    # take a snapshot of the staging area<br>
+    git commit -m "add README to initial commit"<br>
+    <br>
+    # provide the path for the repository you created on github<br>
+    git remote add origin https://github.com/YOUR-USERNAME/YOUR-REPOSITORY.git<br>
+    <br>
+    # push changes to github<br>
+    git push --set-upstream origin main<br>
+         </code></div>
+
+
+            <h5> Example: contribute to an existing branch on GitHub</h5>
+            <div class="code"><code># assumption: a project called `repo` already exists on the machine, and a new branch has been pushed to GitHub.com since the last time changes were made locally<br>
+    <br>
+    # change into the `repo` directory<br>
+    cd repo<br>
+    <br>
+    # update all remote tracking branches, and the currently checked out branch<br>
+    git pull<br>
+    <br>
+    # change into the existing branch called `feature-a`<br>
+    git checkout feature-a<br>
+    <br>
+    # make changes, for example, edit `file1.md` using the text editor<br>
+    <br>
+    # stage the changed file<br>
+    git add file1.md<br>
+    <br>
+    # take a snapshot of the staging area<br>
+    git commit -m "edit file1"<br>
+    <br>
+    # push changes to github<br>
+    git push</code></div>
+            <br>
+            <br>
+        </section>
+
+
+
+        <section class="main-section" id="References">
+            <header id="References"> References</header>
+
+            <p> All the information used in this page are taken from:</p>
+
+            <li> <a href="https://guides.github.com/introduction/git-handbook/#github"> GitHub</a></li>
+            <li> <a href="https://dzone.com/articles/top-20-git-commands-with-examples"> DZone </a></li>
+            <br>
+            <br>
+        </section>
+
+
+    </main>
+
+
+
+</body>
+
+</html>
